@@ -67,7 +67,7 @@ class BitConverter:
         
         return output_bytes
 
-    # Convert a list of input bytes to a list of output bytes along with the number of padding bytes that were added to round off the last output byte.
+    # Convert a list of input bytes to a list of output bytes along with the number of padding bits that were added to round off the last output byte.
     def convert(self, input_bytes:list):
         self.__reset_output()
         
