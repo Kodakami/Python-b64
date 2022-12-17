@@ -10,11 +10,11 @@ from bit_converter import BitConverter
 B64CharBlock = namedtuple("B64CharBlock", "utf8_starting_index span")
 
 # constants
-UPPER_CASE = B64CharBlock(utf8StartingIndex=65, span=26)    # A...Z
-LOWER_CASE = B64CharBlock(utf8StartingIndex=97, span=26)    # a...z
-NUMBERS = B64CharBlock(utf8StartingIndex=48, span=10)       # 0...9
-CHAR_62 = B64CharBlock(utf8StartingIndex=43, span=1)        # +
-CHAR_63 = B64CharBlock(utf8StartingIndex=47, span=1)        # /
+UPPER_CASE = B64CharBlock(utf8_starting_index=65, span=26)    # A...Z
+LOWER_CASE = B64CharBlock(utf8_starting_index=97, span=26)    # a...z
+NUMBERS = B64CharBlock(utf8_starting_index=48, span=10)       # 0...9
+CHAR_62 = B64CharBlock(utf8_starting_index=43, span=1)        # +
+CHAR_63 = B64CharBlock(utf8_starting_index=47, span=1)        # /
 PADDING_CHAR = '='
 
 # Base-64 starts on upper-case, then lower-case, then numbers, then the last two which vary by implementation.
@@ -109,6 +109,6 @@ def __console_program():
         for c in to_bytes(argB64):
             chars.append(chr(c))
 
-        print("UTF-8: " + '\"' + ''.join(chars) + '\"')
+        print("UTF-8:", ''.join(chars))
 
 __console_program()
